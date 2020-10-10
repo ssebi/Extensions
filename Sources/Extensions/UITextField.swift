@@ -5,6 +5,7 @@
 //  Created by Sebastian Vidrea on 06/10/2019.
 //
 
+#if !os(macOS)
 import UIKit
 
 // MARK: - UITextField Extensions
@@ -30,3 +31,4 @@ public extension UITextField {
     }
 
 }
+#endif

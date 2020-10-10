@@ -5,10 +5,15 @@
 //  Created by Sebastian Vidrea on 06/10/2019.
 //
 
+#if !os(macOS)
 import UIKit
 
 // MARK: - UIViewController extensions
 public extension UIViewController {
+
+    var isVisible: Bool {
+        return self.isViewLoaded && self.view.window != nil
+    }
 
     /// Adds a child `ViewController`.
     /// - Parameter child: Child `ViewController` to add.
@@ -56,4 +61,4 @@ extension UIViewController: UIGestureRecognizerDelegate {
     }
 
 }
-
+#endif

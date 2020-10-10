@@ -18,3 +18,11 @@ public extension Array {
     }
 
 }
+
+public extension Array where Element: BinaryFloatingPoint {
+
+    var average: Element {
+        return self.reduce(0, +) / Element(self.count)
+    }
+
+}
