@@ -5,11 +5,11 @@ final class ExtensionsTests: XCTestCase {
 
     func testArrayExtension() {
         /// make sure the `element` function returns the right element
-        XCTAssertTrue([0].element(at: 0) == 0)
+        XCTAssertTrue([0][safe: 0] == 0)
         let emptyArray = Array<Int>()
         /// trying to subscript an element that doesn't exist;
         /// normally this results in a fatal error `Index out of range` but `element` function shuld return nil instead
-        let element = emptyArray.element(at: 0)
+        let element = emptyArray[safe: 0]
         XCTAssertNil(element)
     }
 

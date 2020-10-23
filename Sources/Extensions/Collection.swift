@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Collection {
+public extension Collection {
 
     /// Safetly subscripts a collection `Element`.
     subscript(safe index: Index) -> Element? {
@@ -16,7 +16,7 @@ extension Collection {
 
 }
 
-extension Collection where SubSequence: Collection {
+public extension Collection where SubSequence: Collection {
 
     func chunks(size: Int) -> [SubSequence] {
         let chunk = self.prefix(size)

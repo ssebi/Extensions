@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 #endif
 
-func *(lhs: Int, rhs: CGFloat) -> CGFloat {
+public func *(lhs: Int, rhs: CGFloat) -> CGFloat {
     return CGFloat(lhs) * rhs
 }
 
-func *(lhs: CGFloat, rhs: Int) -> CGFloat {
+public func *(lhs: CGFloat, rhs: Int) -> CGFloat {
     return lhs * CGFloat(rhs)
 }

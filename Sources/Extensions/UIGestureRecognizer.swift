@@ -8,7 +8,7 @@
 #if !os(macOS)
 import UIKit
 
-extension UIGestureRecognizer {
+public extension UIGestureRecognizer {
 
     func cancel() {
         let oldValue = isEnabled

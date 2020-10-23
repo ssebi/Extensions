@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Int {
+public extension Int {
 
     var times: [Void] {
         return (0..<self).map { _ in return () }

@@ -13,7 +13,7 @@ public extension Array {
     /// Returns the element at a given index.
     /// Safe alternative for subscripting (eg. `arr[0]`)
     /// - Parameter index: Index of the element you want.
-    func element(at index: Index) -> Element? {
+    subscript(safe index: Index) -> Element? {
         return indices.contains(index) ? self[index] : nil
     }
 
